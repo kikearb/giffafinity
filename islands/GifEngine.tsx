@@ -2,6 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 import { Image } from "../components/Image.tsx";
 import { Gif } from "../core/models/gifs.ts";
 import SearchBar from "./SearchBar.tsx";
+import { GifGrid } from "../components/GifGrid.tsx";
 
 type GifListProps = {
   gifs: Gif[];
@@ -23,29 +24,13 @@ export default function GifEngine({ gifs }: GifListProps) {
         </span>
       </h2>
 
-      <ul
-        class="grid gap-base grid-cols-2 md:grid-cols-4 lg:grid-cols-5 auto-rows-auto"
-        aria-live="polite"
-      >
-        {gifs
-          ?.filter((gif) =>
-            searchTerm.length > 0
-              ? gif.title.toLowerCase().includes(searchTerm)
-              : !!gif
-          )
-          .map((gif) => (
-            <li key={gif.url}>
-              <a href={`/${gif.id}/detail`} aria-label={`Link to ${gif.title}`}>
-                <Image
-                  url={gif.url}
-                  preview={gif.preview}
-                  class="rounded-[4px] motion-reduce:animate-none"
-                  alt=""
-                />
-              </a>
-            </li>
-          ))}
-      </ul>
+      <GifGrid
+        gifs={gifs?.filter((gif) =>
+          searchTerm.length > 0
+            ? gif.title.toLowerCase().includes(searchTerm)
+            : !!gif
+        )}
+      />
     </>
   );
 }

@@ -14,4 +14,5 @@ export type GifDTO = {
       url: string;
     };
   };
+  tags: string[];
 };
