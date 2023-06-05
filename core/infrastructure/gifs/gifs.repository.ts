@@ -26,7 +26,6 @@ const getRelated = async (id: string) => {
   try {
     const { data } = await response.json();
 
-    console.log({ data }); // eslint-disable-line
     return gifsFactory.buildGifs(data);
   } catch (error) {
     throw new Error(error.message);

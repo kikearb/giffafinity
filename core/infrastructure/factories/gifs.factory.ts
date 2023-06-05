@@ -4,9 +4,9 @@ import { GifDTO } from "../gifs/gifs.dto.ts";
 const buildIndividualGif = (rawGif: GifDTO): Gif => {
   return {
     id: rawGif.id,
-    url: rawGif.images?.original.url,
+    url: rawGif.images?.original.webp,
     title: rawGif.title,
-    preview: rawGif.images?.["480w_still"].url,
+    preview: rawGif.images?.["480w_still"].webp,
     ...(!!rawGif.tags && { tags: rawGif.tags }),
   };
 };

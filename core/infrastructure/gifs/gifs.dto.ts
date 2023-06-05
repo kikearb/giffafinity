@@ -8,10 +8,10 @@ export type GifDTO = {
   rating: string;
   images: {
     original: {
-      url: string;
+      webp: string;
     };
     "480w_still": {
-      url: string;
+      webp: string;
     };
   };
   tags: string[];
