@@ -7,8 +7,8 @@ export type GifDTO = {
   title: string;
   rating: string;
   images: {
-    original: {
-      webp: string;
+    preview_webp: {
+      url: string;
     };
     "480w_still": {
       webp: string;
