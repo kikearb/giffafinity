@@ -12,7 +12,14 @@ export function Image(props: ImageProps) {
         <source srcSet={props.preview} media="(prefers-reduced-motion)" />
       )}
 
-      <img src={props.url} alt={props.alt} class={props.class} loading="lazy" />
+      <img
+        src={props.url}
+        alt={props.alt}
+        class={props.class}
+        loading="lazy"
+        width="auto"
+        height="auto"
+      />
     </picture>
   );
 }
