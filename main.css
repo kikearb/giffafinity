@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+}

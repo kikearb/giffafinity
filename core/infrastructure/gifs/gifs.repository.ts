@@ -20,12 +20,13 @@ const getTrendings = async () => {
 
 const getRelated = async (id: string) => {
   const response = await fetch(
-    `${RELATED_ENDPOINT}?gif_id=${id}&api_key=${API_KEY}`
+    `${RELATED_ENDPOINT}?gif_id=${id}&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g`
   );
 
   try {
     const { data } = await response.json();
 
+    console.log({ data }); // eslint-disable-line
     return gifsFactory.buildGifs(data);
   } catch (error) {
     throw new Error(error.message);

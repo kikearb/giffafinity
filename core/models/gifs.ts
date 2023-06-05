@@ -3,4 +3,5 @@ export type Gif = {
   url: string;
   title: string;
   preview: string;
+  tags?: string[];
 };

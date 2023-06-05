@@ -28,6 +28,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
     <div class="w-full flex rounded-[8px] overflow-hidden">
       <input
         type="text"
+        name="Buscador"
         aria-label="¿Qué quieres buscar?"
         placeholder="¿Qué quieres buscar?"
         class="w-full p-mini "

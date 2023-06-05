@@ -26,6 +26,7 @@ export default {
       black: "#000000",
       grey: "#999999",
       white: "#FFFFFF",
+      semiblack: "#00000060",
       gradient:
         "linear-gradient(157.9deg, #4158D0 1.21%, rgba(200, 80, 192, 0.46) 49.58%, rgba(255, 204, 112, 0.58) 96.91%);",
     },
@@ -44,6 +45,11 @@ export default {
       sm: "480px",
       md: "768px",
       lg: "1132px",
+    },
+    extend: {
+      aspectRatio: {
+        squareImage: 1,
+      },
     },
   },
 } as Options;
