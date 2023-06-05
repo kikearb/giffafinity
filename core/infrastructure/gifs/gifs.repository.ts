@@ -7,7 +7,9 @@ const RELATED_ENDPOINT = "https://api.giphy.com/v1/gifs/related";
 const DATA_ENDPOINT = "https://api.giphy.com/v1/gifs";
 
 const getTrendings = async () => {
-  const response = await fetch(`${TRENDING_ENDPOINT}?api_key=${API_KEY}`);
+  const response = await fetch(`${TRENDING_ENDPOINT}?api_key=${API_KEY}`, {
+    cache: "reload",
+  });
 
   try {
     const { data } = await response.json();
@@ -20,7 +22,10 @@ const getTrendings = async () => {
 
 const getRelated = async (id: string) => {
   const response = await fetch(
-    `${RELATED_ENDPOINT}?gif_id=${id}&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g`
+    `${RELATED_ENDPOINT}?gif_id=${id}&api_key=Gc7131jiJuvI7IdN0HZ1D7nh0ow5BU6g`,
+    {
+      cache: "reload",
+    }
   );
 
   try {
@@ -33,7 +38,9 @@ const getRelated = async (id: string) => {
 };
 
 const getGifById = async (id: string) => {
-  const response = await fetch(`${DATA_ENDPOINT}/${id}?api_key=${API_KEY}`);
+  const response = await fetch(`${DATA_ENDPOINT}/${id}?api_key=${API_KEY}`, {
+    cache: "reload",
+  });
 
   try {
     const { data } = await response.json();
