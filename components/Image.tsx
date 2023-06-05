@@ -3,6 +3,8 @@ type ImageProps = {
   url: string;
   alt?: string;
   class?: string;
+  width?: string;
+  height?: string;
 };
 
 export function Image(props: ImageProps) {
@@ -17,8 +19,8 @@ export function Image(props: ImageProps) {
         alt={props.alt}
         class={props.class}
         loading="lazy"
-        width="auto"
-        height="auto"
+        width={props.width ?? "200"}
+        height={props.height ?? "200"}
       />
     </picture>
   );

@@ -36,12 +36,14 @@ export default function Detail({
           {gif.title}
         </h2>
         <div class="flex gap-base mb-xlarge items-center flex-col md:flex-row">
-          <div class="flex-shrink-0 grow-0 md:max-w-[50%]">
+          <div class="flex-shrink-0 grow-0 md:max-w-[50%] md:w-[50%] md:h-auto">
             <Image
               preview={gif.preview}
               url={gif.url}
               alt={gif.title}
               class="rounded-[4px]"
+              width="100%"
+              height="auto"
             />
           </div>
           <div class="flex gap-small flex-wrap">

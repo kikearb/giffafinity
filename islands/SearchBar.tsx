@@ -40,7 +40,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         onClick={handleSubmit}
         aria-label="buscar"
       >
-        <Image url="/lupa.svg" alt="" />
+        <Image url="/lupa.svg" width="30" height="30" alt="" />
       </button>
     </div>
   );
