@@ -29,13 +29,13 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
       <input
         type="text"
         name="Buscador"
-        aria-label="¿Qué quieres buscar?"
         placeholder="¿Qué quieres buscar?"
         class="w-full p-mini "
         onInput={handleChange}
         onKeyDown={handleKeyDown}
       />
       <button
+        type="button"
         class="bg-lightGreen p-mini"
         onClick={handleSubmit}
         aria-label="buscar"

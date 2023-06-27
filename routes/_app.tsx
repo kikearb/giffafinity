@@ -11,7 +11,7 @@ export default function App({ Component }: AppProps) {
           url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap');
         </style>
       </Head>
-      <body className="bg-gradient-to-br from-blue via-pink to-yellow bg-no-repeat bg-cover min-h-full font-opensans">
+      <body className="bg-gradient-to-br from-blue via-pink to-yellow bg-no-repeat bg-cover min-h-[100vh] font-opensans">
         <main class="mx-auto max-w-screen-lg py-large px-base lg:px-large">
           <h1 class="mb-xlarge">
             <a href="/" class="inline-flex items-center gap-[14px]">

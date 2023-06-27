@@ -11,7 +11,7 @@ export type GifDTO = {
       url: string;
     };
     "480w_still": {
-      webp: string;
+      url: string;
     };
   };
   tags: string[];

@@ -6,7 +6,7 @@ const buildIndividualGif = (rawGif: GifDTO): Gif => {
     id: rawGif.id,
     url: rawGif.images?.preview_webp.url,
     title: rawGif.title,
-    preview: rawGif.images?.["480w_still"].webp,
+    preview: rawGif.images?.["480w_still"].url,
     ...(!!rawGif.tags && { tags: rawGif.tags }),
   };
 };
