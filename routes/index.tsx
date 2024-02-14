@@ -17,6 +17,7 @@ export default function Home({ data }: { data: Gif[] }) {
     <>
       <Head>
         <title>Guifaffinity</title>
+        <meta name="description" content="Gif searcher with Gipphy API" />
       </Head>
       <section>
         <GifEngine gifs={data} />
