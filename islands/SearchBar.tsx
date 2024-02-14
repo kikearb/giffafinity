@@ -30,6 +30,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         type="text"
         name="Buscador"
         placeholder="¿Qué quieres buscar?"
+        aria-label="¿Qué quieres buscar?"
         class="w-full p-mini "
         onInput={handleChange}
         onKeyDown={handleKeyDown}
