@@ -3,6 +3,7 @@ import { Handlers } from "$fresh/server.ts";
 import { GifGrid } from "../../components/GifGrid.tsx";
 import { Image } from "../../components/Image.tsx";
 import { Tag } from "../../components/Tag.tsx";
+import { gifsFactory } from "../../core/infrastructure/factories/gifs.factory.ts";
 import { Gif } from "../../core/models/gifs.ts";
 import { gifsService } from "../../core/services/gifs/gifs.service.ts";
 import { tagsService } from "../../core/services/tags/tags.service.ts";
@@ -30,6 +31,7 @@ export default function Detail({
     <>
       <Head>
         <title>{gif.title}</title>
+        <meta name="description" content={`${gif.title} detail`} />
       </Head>
       <section>
         <h2 class="text-white font-bold text-h4 md:text-h3 lg:text-h2 mb-medium">
