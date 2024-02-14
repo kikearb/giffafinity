@@ -25,7 +25,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
   };
 
   return (
-    <div class="w-full flex rounded-[8px] overflow-hidden">
+    <form class="w-full flex rounded-[8px] overflow-hidden" role="search">
       <input
         type="text"
         name="Buscador"
@@ -42,6 +42,6 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
       >
         <Image url="/lupa.svg" width="30" height="30" alt="" />
       </button>
-    </div>
+    </form>
   );
 }
